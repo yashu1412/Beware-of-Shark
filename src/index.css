@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.bg-common {
+  @apply bg-common-bg bg-cover bg-center h-screen w-full;
+}
+/* Animation for small fish moving from left to right with smooth ease-in-out */
+@keyframes moveFishSmall {
+  0% {
+    transform: translateX(-100vw); /* Starts completely off-screen to the left */
+  }
+  100% {
+    transform: translateX(100vw); /* Moves completely off-screen to the right */
+  }
+}
+
+/* Animation for big fish moving from left to right with smooth ease-in-out */
+@keyframes moveFishBig {
+  0% {
+    transform: translateX(-100vw); /* Starts completely off-screen to the left */
+  }
+  100% {
+    transform: translateX(100vw); /* Moves completely off-screen to the right */
+  }
+}
+
+/* Animation for shark moving from left to right with smooth ease-in-out */
+@keyframes moveShark {
+  0% {
+    transform: translateX(-100vw); /* Starts completely off-screen to the left */
+  }
+  100% {
+    transform: translateX(100vw); /* Moves completely off-screen to the right */
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
