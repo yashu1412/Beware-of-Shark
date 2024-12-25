@@ -4,33 +4,32 @@
 .bg-common {
   @apply bg-common-bg bg-cover bg-center h-screen w-full;
 }
-/* Animation for small fish moving from left to right with smooth ease-in-out */
+
 @keyframes moveFishSmall {
   0% {
-    transform: translateX(-100vw); /* Starts completely off-screen to the left */
+    transform: translateX(-100vw); 
   }
   100% {
-    transform: translateX(100vw); /* Moves completely off-screen to the right */
+    transform: translateX(100vw); 
   }
 }
 
-/* Animation for big fish moving from left to right with smooth ease-in-out */
 @keyframes moveFishBig {
   0% {
-    transform: translateX(-100vw); /* Starts completely off-screen to the left */
+    transform: translateX(-100vw); 
   }
   100% {
-    transform: translateX(100vw); /* Moves completely off-screen to the right */
+    transform: translateX(100vw); 
   }
 }
 
-/* Animation for shark moving from left to right with smooth ease-in-out */
+
 @keyframes moveShark {
   0% {
-    transform: translateX(-100vw); /* Starts completely off-screen to the left */
+    transform: translateX(-100vw);
   }
   100% {
-    transform: translateX(100vw); /* Moves completely off-screen to the right */
+    transform: translateX(100vw); 
   }
 }
 
