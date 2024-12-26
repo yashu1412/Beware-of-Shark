@@ -9,7 +9,7 @@ const Shark: React.FC = () => (
       bottom: "100px", 
       left: "0",
       display: "flex",
-      animation: "moveShark 7s forwards", 
+      animation: "moveShark 7s linear forwards", 
     }}
   >
     <img

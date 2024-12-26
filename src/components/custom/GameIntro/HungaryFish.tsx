@@ -9,7 +9,7 @@ const HungaryFish: React.FC = () => (
       bottom: "50px", 
       left: "0",
       display: "flex",
-      animation: "moveFishBig 7s forwards", 
+      animation: "moveFishBig 7s linear forwards", 
     }}
   >
     <img

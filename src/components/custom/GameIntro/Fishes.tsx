@@ -1,15 +1,15 @@
 import React from "react";
-import fishImage from "../../../Assets/Fishes.png"; 
+import fishImage from "../../../Assets/Fishes.png";
 
 const Fishes: React.FC = () => (
   <div
     className="fish-animation"
     style={{
       position: "absolute",
-      bottom: "150px", 
+      bottom: "150px",
       left: "0",
       display: "flex",
-      animation: "moveFishSmall 7s forwards", 
+      animation: "moveFishSmall 7s linear forwards", // Stops animation at the end
     }}
   >
     <img
