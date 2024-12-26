@@ -1,22 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .bg-common {
   @apply bg-common-bg bg-cover bg-center h-screen w-full;
 }
 
 @keyframes moveFishSmall {
   0% {
-    transform: translateX(-100vw); 
+    transform: translateX(-100vw);
   }
   100% {
     transform: translateX(100vw); 
   }
 }
 
+
 @keyframes moveFishBig {
   0% {
-    transform: translateX(-100vw); 
+    transform: translateX(-100vw);
   }
   100% {
     transform: translateX(100vw); 
@@ -26,13 +28,37 @@
 
 @keyframes moveShark {
   0% {
-    transform: translateX(-100vw);
+    transform: translateX(-100vw); 
   }
   100% {
     transform: translateX(100vw); 
   }
 }
 
+@keyframes spin-y {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-spin-y {
+  animation: spin-y 3s linear infinite; 
+}
+
+
+.hint-glow {
+  box-shadow: 0 0 10px 2px rgba(238, 227, 10, 0.8); 
+}
+
+button {
+  transition: all 0.3s ease;
+}
+.scale-effect {
+  transform: scale(1.2); 
+}
 
 body {
   margin: 0;
