@@ -1,10 +1,10 @@
 import React from 'react'
-import GamePage from '../Pages/GamePage'
+import GameIntroPage from '../Pages/GameIntroPage'
 
 const GameIntro = () => {
   return (
     <div>
-        <GamePage/>
+        <GameIntroPage/>
       
     </div>
   )
