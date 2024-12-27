@@ -11,27 +11,25 @@
     transform: translateX(-100vw);
   }
   100% {
-    transform: translateX(100vw); 
+    transform: translateX(100vw);
   }
 }
-
 
 @keyframes moveFishBig {
   0% {
     transform: translateX(-100vw);
   }
   100% {
-    transform: translateX(100vw); 
+    transform: translateX(100vw);
   }
 }
 
-
 @keyframes moveShark {
   0% {
-    transform: translateX(-100vw); 
+    transform: translateX(-100vw);
   }
   100% {
-    transform: translateX(100vw); 
+    transform: translateX(100vw);
   }
 }
 
@@ -45,26 +43,25 @@
 }
 
 .animate-spin-y {
-  animation: spin-y 3s linear infinite; 
+  animation: spin-y 3s linear infinite;
 }
 
-
 .hint-glow {
-  box-shadow: 0 0 10px 2px rgba(238, 227, 10, 0.8); 
+  box-shadow: 0 0 10px 2px rgba(238, 227, 10, 0.8);
 }
 
 button {
   transition: all 0.3s ease;
 }
 .scale-effect {
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
