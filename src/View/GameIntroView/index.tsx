@@ -19,10 +19,11 @@ const GameIntroView: React.FC = () => {
       {showStartButton && (
         <button
           onClick={() => navigate('/game')}
-          className="z-10 mt-8 px-6 py-3 bg-violet-600 text-white text-lg font-bold rounded-lg shadow-md hover:bg-violet-700 transition-colors"
-        >
-          Start Game
+          className="z-10 mt-8 px-6 py-3 bg-[#34841E] text-white text-xl font-akshar font-normal rounded-lg shadow-md hover:bg-[#2B6C17] transition-colors"
+          >
+           Start Game
         </button>
+
       )}
     </GameIntro>
   )
