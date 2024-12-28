@@ -1,7 +1,7 @@
 import React from 'react'
-import HungaryImage from '../../../Assets/Hungary-fish.png'
+import HungryImage from '../../../Assets/Hungry-fish.png'
 
-const HungaryFish: React.FC = () => (
+const HungryFish: React.FC = () => (
   <div
     className="big-fish-animation"
     style={{
@@ -13,7 +13,7 @@ const HungaryFish: React.FC = () => (
     }}
   >
     <img
-      src={HungaryImage}
+      src={HungryImage}
       alt="Big Fish"
       style={{
         width: '300px',
@@ -23,4 +23,4 @@ const HungaryFish: React.FC = () => (
   </div>
 )
 
-export default HungaryFish
+export default HungryFish

@@ -1,9 +1,9 @@
-import React from 'react';
-import GameOverImage from '../../Assets/GameOver.png';
-import PowerUp from '../../components/base/PowerUps';
+import React from 'react'
+import GameOverImage from '../../Assets/GameOver.png'
+import PowerUp from '../../components/base/PowerUp'
 
 interface GameOverViewProps {
-  isScoreVisible: boolean;
+  isScoreVisible: boolean
 }
 
 const GameOverView: React.FC<GameOverViewProps> = ({ isScoreVisible }) => {
@@ -31,7 +31,7 @@ const GameOverView: React.FC<GameOverViewProps> = ({ isScoreVisible }) => {
         </div>
       </div>
     </PowerUp>
-  );
-};
+  )
+}
 
-export default GameOverView;
+export default GameOverView
