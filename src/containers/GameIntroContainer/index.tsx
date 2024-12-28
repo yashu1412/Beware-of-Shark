@@ -10,7 +10,6 @@ export function GameIntroContainer() {
   useEffect(() => {
     const titleTimeout = setTimeout(() => {
       setShowFish(true); 
-
       const fishTimeout = setTimeout(() => {
         setShowFish(true); 
         const bigFishDelay = setTimeout(() => {
