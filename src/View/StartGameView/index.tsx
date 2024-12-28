@@ -1,9 +1,9 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import titleImage from '../../Assets/Title-image.png'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import titleImage from '../../assets/Title-image.png';
 
 const StartGameView: React.FC = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <div className="bg-common flex flex-col items-center justify-center">
@@ -16,13 +16,13 @@ const StartGameView: React.FC = () => {
       <div style={{ position: 'relative', bottom: '50px' }}>
         <button
           onClick={() => navigate('/gameintro')}
-          className="bg-green-700 text-white px-20 py-3 rounded-2xl text-xl hover:bg-green-600 w-[376px] h-[56px]"
+          className="bg-[#34841E] text-white px-20 py-3 rounded-2xl text-2xl hover:bg-[#34841E] w-[376px] h-[56px] font-akshar font-normal"
         >
-          Press to Continue
+          Press to continue
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default StartGameView
+export default StartGameView;

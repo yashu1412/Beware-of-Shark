@@ -1,35 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Anton+SC&display=swap');
+
+/* Game Intro */
+body {
+  font-family: 'Anton SC', sans-serif;
+}
+
+.anton-sc-regular {
+  font-family: 'Anton SC', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36.13px;
+  text-align: center;
+}
+
+
+
+/* Define Akshar font */
+.font-akshar {
+  font-family: 'Akshar', serif;
+  font-optical-sizing: auto;
+}
 
 .bg-common {
   @apply bg-common-bg bg-cover bg-center h-screen w-full;
 }
-
+/* Fish animation */
 @keyframes moveFishSmall {
   0% {
-    transform: translateX(-100vw);
+    transform: translateX(-100vw); 
+  }
+  50% {
+    transform: translateX(calc(50vw - 60%));
+  }
+  75% {
+    transform: translateX(calc(50vw - 60%)); 
   }
   100% {
     transform: translateX(100vw);
   }
 }
 
+/* Big fish animation */
 @keyframes moveFishBig {
   0% {
-    transform: translateX(-100vw);
+    transform: translateX(-100vw); 
+  }
+  50% {
+    transform: translateX(calc(50vw - 50%)); 
+  }
+  75% {
+    transform: translateX(calc(50vw - 50%)); 
   }
   100% {
-    transform: translateX(100vw);
+    transform: translateX(100vw); 
+  }
+}
+/* Shark animation */
+@keyframes moveShark {
+  0% {
+    transform: translateX(-100vw); 
+  }
+  50% {
+    transform: translateX(calc(50vw - 60%));
+  }
+  75% {
+    transform: translateX(calc(50vw - 60%)); 
+  }
+  100% {
+    transform: translateX(100vw); 
   }
 }
 
-@keyframes moveShark {
+/* Bubble appearance animation */
+@keyframes bubbleAppear {
   0% {
-    transform: translateX(-100vw);
+    transform: scale(0);
+    opacity: 0;
   }
   100% {
-    transform: translateX(100vw);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Text fade-in animation */
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -41,7 +106,7 @@
     transform: rotateY(360deg);
   }
 }
-
+/* GamePage */
 .animate-spin-y {
   animation: spin-y 3s linear infinite;
 }
@@ -56,6 +121,40 @@ button {
 .scale-effect {
   transform: scale(1.2);
 }
+/* Game Over */
+/* Slide-in animation for the right score */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation for the wrong score */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the slide-in animations */
+.animate-slide-in-left {
+  animation: slideInLeft 1.2s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 1.2s ease-out forwards;
+}
+
 
 body {
   margin: 0;

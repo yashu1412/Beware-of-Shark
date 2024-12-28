@@ -1,9 +1,9 @@
-import React from 'react'
-import GameOverImage from '../../Assets/GameOver.png'
-import PowerUp from '../../components/base/PowerUp'
+import React from 'react';
+import GameOverImage from '../../assets/GameOver.png';
+import PowerUp from '../../components/base/PowerUps';
 
 interface GameOverViewProps {
-  isScoreVisible: boolean
+  isScoreVisible: boolean;
 }
 
 const GameOverView: React.FC<GameOverViewProps> = ({ isScoreVisible }) => {
@@ -21,17 +21,29 @@ const GameOverView: React.FC<GameOverViewProps> = ({ isScoreVisible }) => {
           isScoreVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <div className="flex flex-col items-center px-6 py-40 pt-6 bg-[#34841E] text-white font-bold w-1/3">
-          <p className="text-2xl font-normal bg-gray-900 p-4">Right</p>
-          <span className="text-4xl font-normal pt-4">4</span>
+        <div
+          className={`flex flex-col items-center px-6 pt-6 bg-[#34841E] text-white font-bold w-1/3 transform ${
+            isScoreVisible ? 'animate-slide-in-left' : ''
+          }`}
+        >
+          <p className="text-2xl font-normal bg-[#303050] p-4">Right</p>
+          <div className='pt-20 pb-20'>
+          <span className="text-6xl font-normal ">4</span>
+          </div>
         </div>
-        <div className="flex flex-col items-center px-6 py-40 pt-6 bg-[#FF0900] text-white font-bold w-1/3">
-          <p className="text-2xl font-normal bg-gray-900 p-4">Wrong</p>
-          <span className="text-4xl font-normal pt-4">1</span>
+        <div
+          className={`flex flex-col items-center px-6 pt-6 bg-[#FF0900] text-white font-bold w-1/3 transform ${
+            isScoreVisible ? 'animate-slide-in-right' : ''
+          }`}
+        >
+          <p className="text-2xl font-normal bg-[#303050] p-4">Wrong</p>
+          <div className='pt-20 pb-20'>
+          <span className="font-normal text-6xl mx-auto">1</span>
+          </div>
         </div>
       </div>
     </PowerUp>
-  )
-}
+  );
+};
 
-export default GameOverView
+export default GameOverView;
