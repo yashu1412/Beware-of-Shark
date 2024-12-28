@@ -1,5 +1,5 @@
 import React from 'react'
-import titleImage from '../../../Assets/Title-image.png'
+import titleImage from '../../../assets/Title-image.png'
 
 interface GameIntro {
   animateTitle: boolean
@@ -10,7 +10,7 @@ export function GameIntro({ animateTitle, children }: GameIntro) {
   return (
     <div className="bg-common flex flex-col items-center justify-center relative overflow-hidden">
       <div
-        className={`transition-transform duration-[10000ms] ease-in-out flex flex-col items-center justify-center ${
+        className={`transition-transform duration-[10000ms] ease-in flex flex-col items-center justify-center ${
           animateTitle ? 'scale-[2]' : 'scale-100'
         }`}
         style={{
