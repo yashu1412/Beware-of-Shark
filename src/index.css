@@ -18,8 +18,6 @@ body {
   text-align: center;
 }
 
-
-
 /* Define Akshar font */
 .font-akshar {
   font-family: 'Akshar', serif;
@@ -32,13 +30,13 @@ body {
 /* Fish animation */
 @keyframes moveFishSmall {
   0% {
-    transform: translateX(-100vw); 
+    transform: translateX(-100vw);
   }
   50% {
     transform: translateX(calc(50vw - 60%));
   }
   75% {
-    transform: translateX(calc(50vw - 60%)); 
+    transform: translateX(calc(50vw - 60%));
   }
   100% {
     transform: translateX(100vw);
@@ -48,31 +46,31 @@ body {
 /* Big fish animation */
 @keyframes moveFishBig {
   0% {
-    transform: translateX(-100vw); 
+    transform: translateX(-100vw);
   }
   50% {
-    transform: translateX(calc(50vw - 50%)); 
+    transform: translateX(calc(50vw - 50%));
   }
   75% {
-    transform: translateX(calc(50vw - 50%)); 
+    transform: translateX(calc(50vw - 50%));
   }
   100% {
-    transform: translateX(100vw); 
+    transform: translateX(100vw);
   }
 }
 /* Shark animation */
 @keyframes moveShark {
   0% {
-    transform: translateX(-100vw); 
+    transform: translateX(-100vw);
   }
   50% {
     transform: translateX(calc(50vw - 60%));
   }
   75% {
-    transform: translateX(calc(50vw - 60%)); 
+    transform: translateX(calc(50vw - 60%));
   }
   100% {
-    transform: translateX(100vw); 
+    transform: translateX(100vw);
   }
 }
 
@@ -154,7 +152,6 @@ button {
 .animate-slide-in-right {
   animation: slideInRight 1.2s ease-out forwards;
 }
-
 
 body {
   margin: 0;

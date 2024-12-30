@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import fishImage from '../../../assets/Fishes.png';
-import bubbleImage from '../../../assets/FishesBubble.png';
+import React, { useState, useEffect } from 'react'
+import fishImage from '../../../assets/Fishes.png'
+import bubbleImage from '../../../assets/FishesBubble.png'
 
 const Fishes: React.FC = () => {
-  const [isAtMiddle, setIsAtMiddle] = useState(false);
+  const [isAtMiddle, setIsAtMiddle] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsAtMiddle(true);
-    }, 6000);
+      setIsAtMiddle(true)
+    }, 6000)
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <div
@@ -73,7 +73,7 @@ const Fishes: React.FC = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Fishes;
+export default Fishes

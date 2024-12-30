@@ -1,9 +1,9 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import titleImage from '../../assets/Title-image.png';
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import titleImage from '../../assets/Title-image.png'
 
 const StartGameView: React.FC = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
     <div className="bg-common flex flex-col items-center justify-center">
@@ -22,7 +22,7 @@ const StartGameView: React.FC = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default StartGameView;
+export default StartGameView

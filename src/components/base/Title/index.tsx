@@ -1,5 +1,5 @@
 import React from 'react'
-import titleImage from '../../../Assets/Title-image.png'
+import titleImage from '../../../assets/Title-image.png'
 
 const TitleImage: React.FC = () => (
   <div

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Coin from '../../../Assets/coin.png'
-import Hint from '../../../Assets/hint.png'
-import PowerUpImage from '../../../Assets/powerUp.png'
+import Coin from '../../../assets/coin.png'
+import Hint from '../../../assets/hint.png'
+import PowerUpImage from '../../../assets/powerUp.png'
 
 interface PowerUpProps {
   children: React.ReactNode // Allow wrapping child components

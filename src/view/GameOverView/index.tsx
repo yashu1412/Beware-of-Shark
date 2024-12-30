@@ -1,9 +1,9 @@
-import React from 'react';
-import GameOverImage from '../../assets/GameOver.png';
-import PowerUp from '../../components/base/PowerUps';
+import React from 'react'
+import GameOverImage from '../../assets/GameOver.png'
+import PowerUp from '../../components/base/PowerUp'
 
 interface GameOverViewProps {
-  isScoreVisible: boolean;
+  isScoreVisible: boolean
 }
 
 const GameOverView: React.FC<GameOverViewProps> = ({ isScoreVisible }) => {
@@ -27,8 +27,8 @@ const GameOverView: React.FC<GameOverViewProps> = ({ isScoreVisible }) => {
           }`}
         >
           <p className="text-2xl font-normal bg-[#303050] p-4">Right</p>
-          <div className='pt-20 pb-20'>
-          <span className="text-6xl font-normal ">4</span>
+          <div className="pt-20 pb-20">
+            <span className="text-6xl font-normal ">4</span>
           </div>
         </div>
         <div
@@ -37,13 +37,13 @@ const GameOverView: React.FC<GameOverViewProps> = ({ isScoreVisible }) => {
           }`}
         >
           <p className="text-2xl font-normal bg-[#303050] p-4">Wrong</p>
-          <div className='pt-20 pb-20'>
-          <span className="font-normal text-6xl mx-auto">1</span>
+          <div className="pt-20 pb-20">
+            <span className="font-normal text-6xl mx-auto">1</span>
           </div>
         </div>
       </div>
     </PowerUp>
-  );
-};
+  )
+}
 
-export default GameOverView;
+export default GameOverView

@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import StartPage from '../Pages/StartGamePage'
-import GameIntroPage from '../Pages/GameIntroPage'
-import QuestionPage from '../Pages/QuestionsPage'
-import GameOverPage from '../Pages/GameOver'
+import StartPage from '../pages/StartGamePage'
+import GameIntroPage from '../pages/GameIntroPage'
+import QuestionPage from '../pages/QuestionsPage'
+import GameOverPage from '../pages/GameOver'
 
 const route = createBrowserRouter([
   {

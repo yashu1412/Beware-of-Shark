@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import GameOverView from '../../View/GameOverView'
+import GameOverView from '../../view/GameOverView'
 const GameOverContainer: React.FC = () => {
   const [isScoreVisible, setIsScoreVisible] = useState(false)
 
