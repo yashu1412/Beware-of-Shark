@@ -1,50 +1,55 @@
-import React from 'react'
-import PowerUp from '../../components/base/PowerUp'
-import Submarine from '../../Assets/submarine.png'
-import Fishes from '../../Assets/fishes1.png'
-import HungryFish from '../../Assets/Hungry-fish.png'
-import 'animate.css'
-const QuestionsView = () => {
-  const mainContent = (
-    <div className="w-full max-w-2xl mx-auto ">
-      <div className="relative mt-32 md:mt-48 animate__animated animate__fadeInLeft">
-        <img
-          src={Submarine}
-          alt="Submarine"
-          className="w-full max-w-md mx-auto object-contain relative top-7"
-        />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md text-center">
-          <h2 className="font-semibold text-4xl  text-center text-gray-800 mt-32 ml-8 w-auto ">
-            "India is located in Africa"
-          </h2>
-        </div>
-      </div>
-      <div className="mt-20 md:mt-16 flex justify-center items-center space-x-4 animate__animated animate__fadeInLeft animate__delay-1s">
-        <button className="font-bold text-4xl text-white bg-green-700 px-16  py-2 rounded-full ">
-          True
-        </button>
-        <button className="font-bold  text-4xl text-white bg-red-600 px-14 py-2 rounded-full">
-          False
-        </button>
-      </div>
-      <img
-        src={Fishes}
-        alt=""
-        className="animate__animated animate__backInRight animate__delay-2s fixed right-0 bottom-32 z-10 w-40"
-      />{' '}
-      <img
-        src={HungryFish}
-        alt=""
-        className="animate__animated animate__backInLeft animate__delay-2s fixed left-4 bottom-32 z-10 w-44"
-      />{' '}
-    </div>
-  )
+import React from "react";
+import "tailwindcss/tailwind.css";
+import "animate.css"; // Import animate.css for built-in animations
+import Submarine from "../../components/custom/Game/Submarine";
+import AnswerButtons from "../../components/custom/Game/AnswerButton";
+import PowerUpControls from"../../components/base/PowerUps/index";
+import FishAnimation from "../../components/custom/Game/FishAnimation";
+import { useGameLogic } from "../../containers/QuestionContainer/index";
+
+const QuestionView: React.FC = () => {
+  const {
+    submarinePosition,
+    isSubmarineStopped,
+    showQuestion,
+    message,
+    bigFishMove,
+    bigFishPosition,
+    hideSmallFishes,
+    showBubble,
+    showShark,
+    sharkPosition,
+    score,
+    currentQuestionIndex,
+    questionsData,
+    handleAnswer,
+  } = useGameLogic();
 
   return (
-    <div className="relative">
-      <PowerUp>{mainContent}</PowerUp>
+    <div className="relative flex flex-col items-center justify-center h-screen bg-common overflow-hidden">
+      <Submarine
+        submarinePosition={submarinePosition}
+        isSubmarineStopped={isSubmarineStopped}
+        showQuestion={showQuestion}
+        question={questionsData[currentQuestionIndex].question}
+      />
+      <AnswerButtons handleAnswer={handleAnswer} />
+      <PowerUpControls score={score} />
+      <FishAnimation
+        bigFishMove={bigFishMove}
+        bigFishPosition={bigFishPosition}
+        hideSmallFishes={hideSmallFishes}
+        showBubble={showBubble}
+        showShark={showShark}
+        sharkPosition={sharkPosition}
+      />
+      {message && (
+        <p className="absolute top-4 text-2xl font-semibold text-purple-700 transition-opacity duration-500 ease-in-out">
+          {message}
+        </p>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default QuestionsView
+export default QuestionView;
