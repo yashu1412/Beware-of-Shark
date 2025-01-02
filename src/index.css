@@ -121,6 +121,48 @@ button {
 .scale-effect {
   transform: scale(1.2);
 }
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Shark animation */
+@keyframes Shark {
+  0% {
+    transform: translateX(-100vw); 
+  }
+  50% {
+    transform: translateX(calc(50vw - 60%));
+  }
+  75% {
+    transform: translateX(calc(50vw - 60%)); 
+  }
+}
+
+.animate-left {
+  animation: slide-in-left 0.7s ease-out forwards;
+}
+
+.animate-right {
+  animation: slide-in-right 0.7s ease-out forwards;
+}
+
 /* Game Over */
 /* Slide-in animation for the right score */
 @keyframes slideInLeft {
