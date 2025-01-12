@@ -107,6 +107,7 @@ body {
   }
 }
 /* GamePage */
+
 .animate-spin-y {
   animation: spin-y 3s linear infinite;
 }
@@ -120,6 +121,58 @@ button {
 }
 .scale-effect {
   transform: scale(1.2);
+}
+@keyframes smoothSlideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.custom-slide-in {
+  animation: smoothSlideInLeft 1s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+@keyframes slideInLeftToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.custom-slide-in {
+  animation: slideInLeftToRight 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes moveTrue {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moveFalse {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 @keyframes slide-in-left {
   0% {
