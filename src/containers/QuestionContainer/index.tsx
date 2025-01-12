@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const questionsData = [
-  { question: "Mount Fiji is the highest mountain.", answer: false },
+  { question: "Mount Fuji is the highest mountain.", answer: false },
   { question: "China is the most populated country.", answer: true },
   { question: "The Amazon is the longest river in the world.", answer: false },
   { question: "Africa is the second largest continent.", answer: true },
@@ -22,6 +23,10 @@ export const useGameLogic = () => {
   const [sharkPosition, setSharkPosition] = useState("translate-x-[-100%]");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [wrongAnswers, setWrongAnswers] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     resetGame();
@@ -58,40 +63,49 @@ export const useGameLogic = () => {
     setSharkPosition("translate-x-[-100%]");
   };
 
-  const handleAnswer = (isCorrect: boolean) => {
-    const correctAnswer = questionsData[currentQuestionIndex].answer;
-    if (isCorrect === correctAnswer) {
-      setMessage("Correct!");
-      setScore((prev) => prev + 50); // Add 50 points for correct answer
+  const handleAnswer = (isCorrect:boolean) => {
+    let newScore = score; 
+  
+    if (isCorrect) {
+      newScore += 50; 
+      setCorrectAnswers((prev) => prev + 1);
       setSubmarinePosition("translate-x-[170%]");
-      setTimeout(() => {
-        const nextIndex = (currentQuestionIndex + 1) % questionsData.length;
-        setCurrentQuestionIndex(nextIndex);
-      }, 2000); // Move to the next question
     } else {
-      setMessage("Wrong!");
-      setScore((prev) => Math.max(0, prev - 10)); // Deduct 10 points for wrong answer, prevent negative score
+      newScore = Math.max(0, newScore - 10); 
+      setWrongAnswers((prev) => prev + 1);
       setShowBubble(true);
       setBigFishMove(true);
       setBigFishPosition("translate-x-[50%]");
+    }
+  
+    setScore(newScore);
+
+    if (currentQuestionIndex + 1 >= questionsData.length) {
       setTimeout(() => {
-        setShowBubble(false);
-        setHideSmallFishes(true);
-        setTimeout(() => {
-          setShowShark(true);
-          setSharkPosition("translate-x-[50%]");
-          setTimeout(() => {
-            setBigFishMove(false);
-            setBigFishPosition("translate-x-[150%] scale-50");
-            setTimeout(() => {
-              const nextIndex = (currentQuestionIndex + 1) % questionsData.length;
-              setCurrentQuestionIndex(nextIndex);
-            }, 2000); // Reset after shark animation
-          }, 2000);
-        }, 2000);
-      }, 3000);
+        navigateToGameOver(newScore); 
+      }, 2000);
+    } else {
+      setTimeout(() => {
+        setCurrentQuestionIndex((prev) => prev + 1);
+      }, 2000);
     }
   };
+  
+  const navigateToGameOver = (finalScore: number) => {
+    console.log("Game Over!");
+    console.log("Total Score:", finalScore); 
+    console.log("Correct Answers:", correctAnswers);
+    console.log("Wrong Answers:", wrongAnswers);
+  
+    navigate("/gameover", {
+      state: {
+        score: finalScore,
+        correctAnswers,
+        wrongAnswers,
+      },
+    });
+  };
+  ;
 
   return {
     submarinePosition,
