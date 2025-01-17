@@ -1,8 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import StartPage from '../pages/StartGamePage'
 import GameIntroPage from '../pages/GameIntroPage'
-import QuestionPage from '../pages/QuestionsPage'
-import GameOverPage from '../pages/GameOver'
+import GamePage from '../pages/GamePage'
 
 const route = createBrowserRouter([
   {
@@ -15,12 +14,8 @@ const route = createBrowserRouter([
   },
   {
     path: '/game',
-    element: <QuestionPage />,
-  },
-  {
-    path: '/gameover',
-    element: <GameOverPage />,
-  },
+    element: <GamePage />,
+  }
 ])
 
 const Router: React.FC = () => {
